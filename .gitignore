@@ -4,3 +4,6 @@
 *.exe
 *.idsig
 *.pck
+*.js
+*.html
+*.wasm
