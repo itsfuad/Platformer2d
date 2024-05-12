@@ -1,8 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://dcm6mnbtofjt6"]
+[gd_scene load_steps=5 format=3 uid="uid://dcm6mnbtofjt6"]
 
-[ext_resource type="Texture2D" uid="uid://hywexus5r1pb" path="res://assets/sprites/left.png" id="1_i1mae"]
-[ext_resource type="Texture2D" uid="uid://c1w0nsnqiqxtj" path="res://assets/sprites/right.png" id="2_vy1rm"]
-[ext_resource type="Texture2D" uid="uid://g7b5qmw5bscr" path="res://assets/sprites/up.png" id="3_gfcap"]
+[ext_resource type="Texture2D" uid="uid://uthw228m13bj" path="res://assets/sprites/button.png" id="1_3n3qv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j3hub"]
+radius = 80.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y1vel"]
+radius = 80.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q4382"]
+radius = 80.0
 
 [node name="MobileControls" type="CanvasLayer"]
 
@@ -15,20 +22,24 @@ offset_right = 40.0
 grow_vertical = 0
 
 [node name="left" type="TouchScreenButton" parent="HBoxContainer"]
-modulate = Color(0.976471, 0.976471, 0.976471, 1)
+modulate = Color(0.976471, 0.976471, 0.976471, 0.392157)
 self_modulate = Color(1, 1, 1, 0.796078)
-position = Vector2(73, -161)
-scale = Vector2(1.7541, 1.7541)
-texture_normal = ExtResource("1_i1mae")
+position = Vector2(78, -30)
+rotation = -1.5708
+scale = Vector2(1.13195, 1.11281)
+texture_normal = ExtResource("1_3n3qv")
+shape = SubResource("CircleShape2D_j3hub")
 action = "move_left"
 visibility_mode = 1
 
 [node name="right" type="TouchScreenButton" parent="HBoxContainer"]
-modulate = Color(0.976471, 0.976471, 0.976471, 1)
+modulate = Color(0.976471, 0.976471, 0.976471, 0.392157)
 self_modulate = Color(1, 1, 1, 0.796078)
-position = Vector2(309, -163)
-scale = Vector2(1.7541, 1.7541)
-texture_normal = ExtResource("2_vy1rm")
+position = Vector2(379.652, -143.663)
+rotation = 1.5708
+scale = Vector2(1.17632, 1.17393)
+texture_normal = ExtResource("1_3n3qv")
+shape = SubResource("CircleShape2D_y1vel")
 action = "move_right"
 visibility_mode = 1
 
@@ -44,10 +55,11 @@ grow_horizontal = 0
 grow_vertical = 0
 
 [node name="up" type="TouchScreenButton" parent="HBoxContainer2"]
-modulate = Color(0.976471, 0.976471, 0.976471, 1)
+modulate = Color(0.976471, 0.976471, 0.976471, 0.392157)
 self_modulate = Color(1, 1, 1, 0.796078)
-position = Vector2(-159, -149)
-scale = Vector2(1.85246, 1.85246)
-texture_normal = ExtResource("3_gfcap")
+position = Vector2(-148, -156)
+scale = Vector2(1.25, 1.26592)
+texture_normal = ExtResource("1_3n3qv")
+shape = SubResource("CircleShape2D_q4382")
 action = "jump"
 visibility_mode = 1
